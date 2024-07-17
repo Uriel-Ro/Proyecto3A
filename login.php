@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="estilo.css">
+    <script>type="text/javascript" href="validaciones.js"</script>
     <title>Login</title>
 </head>
 <body>
@@ -34,28 +35,34 @@
         </div>
       </nav>
 
-      <form>
+      <form action="menu.php" method="post" enctype="application/x-www-form-urlencoded">
         <div class="login">
   <div class="row mb-3">
-    <label for="inlineFormInputGroupUsername" class="col-sm-2 col-form-label">Usuario</label>
+    <label for="usr" class="col-sm-2 col-form-label">Usuario</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inlineFormInputGroupUsername">
+      <input type="text" class="form-control" id="usr" name="usr" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this); revisarObligatorio(this);" />
     </div>
   </div>
   <div class="row mb-3">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Contraseña</label>
+    <label for="pwd" class="col-sm-2 col-form-label">Contraseña</label>
     <div class="col-sm-10">
-      <input type="password" class="form-control" id="inputPassword3">
+      <input type="password" class="form-control" id="pwd" name="pwd" onfocus="entroEnFoco(this)" onblur="salioDeFoco(this); revisarLongitud(this, 8);" />
     </div>
   </div>
   </div>
   </div>
   <div class="login">
-  <button type="submit" class="btn btn-primary">Sign in</button>
+  <button type="submit" class="btn btn-primary" value="Ingresar">Sign in</button>
   </div>
   
 </form>
+<?php
+    error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
+    if ($_GET["error"] == "si") {
+        echo "<span style=\"color:#F00;  font-family: Verdana; font-size:2em;\">VERIFICA TUS DATOS</span>";
+    }
 
+    ?>
       <footer>
         SPS - Todos los derechos reservados. 16/07/2024
      </footer>
