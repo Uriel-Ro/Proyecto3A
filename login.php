@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="estilo.css">
     <title>Login</title>
 </head>
 <body>
@@ -35,6 +35,7 @@
       </nav>
 
       <form>
+        <div class="login">
   <div class="row mb-3">
     <label for="inlineFormInputGroupUsername" class="col-sm-2 col-form-label">Usuario</label>
     <div class="col-sm-10">
@@ -48,7 +49,11 @@
     </div>
   </div>
   </div>
+  </div>
+  <div class="login">
   <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+  
 </form>
 
       <footer>

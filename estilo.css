@@ -8,3 +8,11 @@ p{
 footer{
     text-align: center;
 }
+form{
+    margin: 20%;
+}
+.login{
+    width: 475px;
+    height: 110px;
+    margin: auto;
+}
