@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+}
+p{
+    margin: 5% ;
+    text-align: justify;
+}
+footer{
+    text-align: center;
+}
+form{
+    margin: 20%;
+}
+.login{
+    width: 475px;
+    height: 110px;
+    margin: auto;
+}
+input.error {
+	background-color:#dfe3ee;
+	border: 1px solid red;
+}
+
+.enfoco {
+    background-color: #6497b1;
+    border: 2px solid #011f4b;
+}
