@@ -25,3 +25,9 @@ input.error {
     background-color: #6497b1;
     border: 2px solid #011f4b;
 }
+
+.carousel-item img {
+    height: 300px; 
+    object-fit: unset; 
+  }
+  
